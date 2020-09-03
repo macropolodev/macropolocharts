@@ -18,7 +18,7 @@ fs.readdir(path.join( __dirname, '/images/'), (err, files) => {
   unusedImages = [...imagesArr];
 
   console.log('cron is running...');
-  cron.schedule('0 13 * * 1-5', () => {
+  cron.schedule('5 13 * * 1-5', () => {
     console.log(' ');
     tweet();
   });
