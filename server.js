@@ -17,11 +17,12 @@ fs.readdir(path.join( __dirname, '/images/'), (err, files) => {
   })
   unusedImages = [...imagesArr];
 
-  console.log('cron is running...');
-  cron.schedule('* * * * 1-5', () => {
-    console.log(' ');
-    tweet();
-  });
+  tweet();
+  // console.log('cron is running...');
+  // cron.schedule('* * * * 1-5', () => {
+  //   console.log(' ');
+  //   tweet();
+  // });
 
 })
 
