@@ -4,6 +4,12 @@ const fs = require( 'fs' ),
       Twit = require( 'twit' ),
       config = require( path.join( __dirname, 'config.js' ) ),
       cron = require( 'node-cron' );
+const config = {
+  consumer_key:         'TfwVdFJbuzqvBdSAqeVwnYLuZ',
+  consumer_secret:      '5GZNiTRQM7eBvlFRxShsWwD7bOLdKYv5zcx3OFhduS31YXUavj',
+  access_token:         '1300801814376460288-8w86qOB4IjexwQOvjBGwYo58kHVIBX',
+  access_token_secret:  'QGeHCxTMzBDbqtgFAJfdrt9cislVapjwOBG5doX4gtu7I'
+}
 const T = new Twit( config );
 let imagesArr = [];
 let unusedImages = [];
