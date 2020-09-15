@@ -34,7 +34,7 @@ function run() {
     let unusedTxt;
 
     // tweet
-    // tweet( num );
+    tweet( num );
 
     // remove image from unused images list
     if(imagesArr.length < 2) {
