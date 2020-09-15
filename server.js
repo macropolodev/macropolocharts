@@ -48,6 +48,7 @@ run();
 function run() {
   console.log('fetching random image...');
   let img = pickRandomNum(imagesArr);
+  console.log(img)
   tweet( img );
 }
 
@@ -57,6 +58,7 @@ function pickRandomNum(arr) {
 
 function tweet( img ){
   imagePath = 'https://macropolo-s3.s3.us-east-2.amazonaws.com/twitter_charts/' + imagesArr[img];
+  console.log(imagePath);
 
   https.get(imagePath, (resp) => {
     console.log('converting image to base64...');
