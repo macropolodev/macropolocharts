@@ -18,10 +18,13 @@ let url;
 let title;
 let imagesArr;
 
-run();  
+run(); 
+console.log('') 
 
 // FUNCTIONS
 function run() {
+  let time = new Date()
+  console.log(time.toString())
   console.log('fetching random image...');
   fs.readFile('UNUSED_IMAGES.txt', 'utf-8', (err, data) => {
     if(err) throw err;
@@ -63,7 +66,7 @@ function pickRandomNum(arr) {
   return Math.floor( Math.random() * arr.length )
 }
 
-function tweet( num ){
+function tweet(num){
   imagePath = 'https://macropolo-s3.s3.us-east-2.amazonaws.com/twitter_charts/' + imagesArr[num];
   console.log(imagePath);
 
