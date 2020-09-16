@@ -13,6 +13,8 @@ const config = {
 const T = new Twit( config );
 
 let imagePath;
+let imageListPath = '/home/ubuntu/macropolocharts/UNUSED_IMAGES.txt'; // prod
+//let imageListPath = 'UNUSED_IMAGES.txt'; // local
 let b64content;
 let url;
 let title;
@@ -26,18 +28,18 @@ function run() {
   let time = new Date()
   console.log(time.toString())
   console.log('fetching random image...');
-  fs.readFile('UNUSED_IMAGES.txt', 'utf-8', (err, data) => {
-    if(err) throw err;
+  fs.readFile(imageListPath, 'utf-8', (err, data) => {
+    if(err) console.log(err);
 
     // pick image from unused images list
     imagesArr = data.split(',\n');
-    console.log(imagesArr)
+    // console.log(imagesArr)
     let num = pickRandomNum(imagesArr);
-    console.log(num)
+    // console.log(num)
     let unusedTxt;
 
     // tweet
-    tweet( num );
+    tweet(num);
 
     // remove image from unused images list
     if(imagesArr.length < 2) {
