@@ -44,7 +44,7 @@ function run() {
     // remove image from unused images list
     if(imagesArr.length < 2) {
       fs.readFile('ALL_IMAGES.txt', 'utf-8', (errr, response) => {
-        console.log(response)
+        // console.log(response)
         unusedTxt = response;
         fs.writeFile('UNUSED_IMAGES.txt', unusedTxt, (error) => {
           if(error) throw error;
@@ -60,7 +60,7 @@ function run() {
       })
     }
 
-    console.log('unusedTxt:', unusedTxt)
+    // console.log('unusedTxt:', unusedTxt)
   })
 }
 
